@@ -1,0 +1,20 @@
+jQuery('.imggroup').on('click', function(){
+	jQuery('.imggroup').removeClass('active');
+	jQuery(this).addClass('active');
+	if( jQuery('.active', this).length() > 0 ){
+		jQuery('li', this).removeClass('active');
+	}
+});
+
+
+if already active do something else? (if hasclass)
+remove parent ul active classes
+remove all active classes
+add active to clicked parent
+add class to clicked sub item '.active'
+
+
+for arrows
+if is first disable prev
+if is last disable next
+if click arrow and not first 2 then do next,prev slector and toggle class

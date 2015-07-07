@@ -1,0 +1,207 @@
+/*Create a button with three dashed inside*/
+/*create left and right arrows to be clicked*/
+/*LOOK INTO AUTO-Prefixer*/
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:400,500,700);
+html, body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  }
+
+
+#boxWrap {
+  padding-top: 70px;
+  text-align: center;
+  display: block;
+  width: 100%; 
+}
+
+/*********************
+HEADER EVERYTHING
+*********************/
+
+#head {
+  position:fixed;
+  top: 0;
+  left:0;
+  height: 70px;
+  width: 100%;
+  border-bottom: 2px solid black;
+  border-top: 2px solid black;
+  background-color: #ffffff;
+  color: #ef4f25; }
+  #head h1 {
+    text-align: center;
+    letter-spacing: 2px; }
+    #head h1:hover {
+      text-shadow: 1px 1px 3px white; }
+
+/***************
+The Logo
+***************/
+
+#dbsLogo{
+  height: 100%;
+  width: 100px;
+}
+
+/****************************
+HEADER BUTTON (HAMBURGER)
+****************************/
+
+.button {
+  height: 100%;
+  background-color: #e9e8e6;
+}
+
+#buttonLogo{
+  display:inline-block;
+}
+
+h1#pageHeader{
+  display:inline-block;
+  position:relative;
+  bottom: 5px;
+}
+
+/*Container for button and header*/
+#st-trigger-effects{
+ height: 100%;
+}
+
+#mover {
+  width: 33.3%;
+  height: 100%;
+  float: left;
+  display: inline-block;
+}
+
+#mover:hover {
+  cursor: pointer; }
+
+#mover:hover .btn {
+  transition-property: background-color;
+  transition-duration: .5s;
+  background-color: #ef4f25; }
+
+nav .optionList {
+  width: 100%;
+  text-align: center; 
+}
+
+ul {
+  width: 100%;
+  list-style: none;
+  margin-top: 10px;
+}
+
+
+ul ul li a{
+  width: 100%;
+  font-size: .7em;
+  text-decoration: none;
+  font-style: italic;
+}
+
+.btn {
+  margin: 3px;
+  width: 1.45em;
+  height: 5px;
+  background-color: #ef4f25;
+  border-radius: 25%; }
+
+.btnPiece {
+  display: block; }
+
+/*header title (the one AFTER 'DBS Interactive' and the Hamburger button*/
+#headerTitle{
+  float: left;
+  background-color: #D0CCCB;
+  display:inline-block;
+  height: 100%;
+  width: 50%;
+}
+
+#headerDescription{
+  display: inline-block;
+  background-color: #d0cccb;
+  margin: 0;
+  height: 100%;
+}
+
+
+/*left and right arrows*/
+
+#controls{
+  height: 100%;
+  width: 5%;
+  display:inline-block;
+}
+
+.leftSelect {
+  font-size: 1.5em;
+  display:inline-block;
+}
+
+.rightSelect {
+  font-size: 1.5em;
+  display: inline-block;
+}
+
+.leftSelect:hover, .rightSelect:hover {
+  transition-property: color, cursor;
+  transition-duration: .5s, .2s;
+  color: green;
+  cursor: pointer; }
+
+/************************
+IMAGE TO BE CHANGED 
+************************/
+img {
+  width: 750px;
+
+  display: inline;
+  font-family: Homenaje; }
+
+/***********************************
+TEXT AREA (PARAGRAPH AND SUCH)
+************************************/
+#part1{
+	display: table; 
+}
+
+
+
+/*Text Content Section*/
+.imageHolder{
+	display: table-cell; 
+	background-color: white;
+	width: 10em;
+	height: 10em;
+}
+
+#textContent{
+	display: table;
+	width: 100%;
+	height: 12.844em; /*Height of the top header times 3*/
+	background-color: white; /*Placeholder. Shows where description is suppose to be placed*/
+}
+
+#textContent #description {
+	padding-top: 3.2109375em; /*Pushes content down to center of section based on the size of the div itself*/
+}
+
+#description p {
+	display: table-cell;
+}
+
+#avatarMark{
+display: table-cell;
+width: 50px;
+height: 50px;
+background-color: blue;	
+}

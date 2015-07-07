@@ -1,0 +1,174 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>Test Page</title>
+	<link type="text/css" rel="stylesheet" href="css/style.css"/>
+	<link type="text/css" rel="stylesheet" href="css/component.css"/>
+	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="js/modernizr.custom.js"></script>
+	<script src="js/slideshow.js"></script>
+	<script src="js/fixer.js"></script>
+	<!--<script src="js/ajax.js"></script>-->
+</head>
+<body>
+
+<!--Test to use REVEAL st-container effect (st-container-effect-2) -->
+<!-- PAGE LINK: http://tympanus.net/Development/SidebarTransitions/-->
+
+<div id="st-container"> 
+  
+  <!--Menu items on TOP of push wrapper for Effect 2-->
+  <nav class="st-menu st-effect-2" id="menu-2">
+    <ul id="styleTile" class="optionList">
+      <li>
+		<a href=''>Styletiles</a>
+		<ul>
+			<li class="active">
+				<a data-src="imgurl" data-title="styleT1" href="images/hollisjones.png"/>Hollis Jones 1</a>
+			</li>
+			<li>
+				<a data-src="imgurl" data-title="styleT2" href="images/hollisjones2.png"/>Hollis Jones 2</a>
+			</li>
+		</ul> <!--end of list of anchors (images)-->
+	  </li>
+	</ul><!--End of Style Time unordered-->
+
+    <ul id="wireframe" class="optionList">
+      <li>
+		<a href=''>Wireframes</a>
+		<ul>
+			<li class="active">
+				<a data-src="imgurl" data-title="styleT1" href="images/hollisjoneswireframe.png"/>Hollis Jones WF1</a>
+			</li>
+			<li>
+				<a data-src="imgurl" data-title="styleT2" href="images/hollisjoneswireframe2.png"/>Hollis Jones WF2</a>
+			</li>
+			<li>
+				<a data-src="imgurl" data-title="styleT2" href="images/hollisjoneswireframe3.png"/>Hollis Jones WF3</a>
+			</li>
+			<li>
+				<a data-src="imgurl" data-title="styleT2" href="images/hollisjoneswireframe4.png"/>Hollis Jones WF4</a>
+			</li>
+		</ul> <!--end of list of anchors (images)-->
+	  </li>
+	</ul><!--End of Style Time unordered-->
+
+    <ul id="mockup" class="optionList">
+      <li>
+		<a href=''>Mockups</a>
+		<ul>
+			<li class="active">
+				<a data-src="imgurl" data-title="styleT1" href="images/hollisjonesmockup.png"/>Hollis Mockup</a>
+			</li>
+			<li>
+				<a data-src="imgurl" data-title="styleT2" href="images/hollisjonesmockup2.png"/>Hollis Mockup</a>
+			</li>
+			<li>
+				<a data-src="imgurl" data-title="styleT2" href="images/hollisjonesmockup3.png"/>Hollis Mockup</a>
+			</li>
+			<li>
+				<a data-src="imgurl" data-title="styleT2" href="images/hollisjonesmockup4.png"/>Hollis Mockup</a>
+			</li>
+		</ul> <!--end of list of anchors (images)-->
+	  </li>
+	</ul><!--End of Style Time unordered-->
+<!--
+<ul id="wireframe" class="optionList">
+      <li>
+		<a href=''>WireFrame</a>
+		<ul class="movedList movedList">
+			<li class="active">
+				<a data-src="imgurl" data-title="wireF1" href="images/hollisjoneswireframe.png"/></a>
+			</li>
+			<li>
+				<a data-src="imgurl" data-title="wireF2" href="images/hollisjoneswireframe2.png"/></a>
+			</li>
+			<li>
+				<a data-src="imgurl" data-title="wireF3" href="images/hollisjoneswireframe3.png"/></a>
+			</li>
+			<li>
+				<a data-src="imgurl" data-title="wireF4" href="images/hollisjoneswireframe4.png"/></a>
+			</li>
+		</ul>
+	  </li>
+	</ul>
+-->
+<!--
+    <ul id="mockup" class="optionList">
+      <li>
+		<a href=''>Mockups</a>
+		<ul class="movedList">
+			<li class="active">
+				<a data-src="imgurl" data-title="mock1" href="images/hollisjones.png"/></a>
+			</li>
+			<li>
+				<a data-src="imgurl" data-title="mock2" href="images/hollisjones2.png"/></a>
+			</li>
+		</ul>
+	  </li>
+	-->
+	</ul>
+<!--
+      <li id="option2" class="testLink">
+		<a href="images/mountainWithWater.jpg">Wireframes</a>
+	  </li>
+
+	  <li id="option3" class="testLink">
+		<a  href="images/nicepic.jpg">Mockups</a>
+	  </li>
+-->
+  </nav>
+  
+  <!--Content UNDER (inside) of the push wrapper-->
+  <!--Content under pusher will be st-effect-7, the 3D Rotate in-->
+  <div class="st-pusher">
+    <div class="st-content">
+     <div class="st-content-inner">
+     	 <div class="main clearfix">
+		  <section id="head">
+    			<div id="mover">
+				<!--anything with class button will cause REVEAL to activate here-->
+    				<div id="st-trigger-effects" class="column">
+					<!--Houses the button to be clicked to perform transition-->
+						<div class="button" data-effect="st-effect-2">
+						<header id='buttonLogo'>
+								<div class="btn"></div>
+								<div class="btn"></div>
+								<div class="btn"></div>
+						</header>
+								<h1 id="pageHeader">Insert Page Title Here</h1>
+					      </div> <!--end of the button-->
+					    </div> <!--end of trigger effects div-->
+					  </div><!--end of mover-->
+
+					 <div id='headerTitle'>
+						<p id='headerDescription'>Insert Page Description Here</p>	
+					</div>
+
+					<div id='controls'>
+      				<p class="leftSelect"> &lt; </p>
+      				<p class="rightSelect"> &gt; </p>
+					</div>
+					 </div>
+			</section><!-- end of head section-->
+			<section id='imageAndArrow'>	
+			      <div id="boxWrap">
+      				<img id="slideImage" src="#" alt="test image"/>
+			     </div><!-- end of div's BoxWrap-->
+			</section><!--end of image and arrow-->
+			<section id='textContent'>
+				<section id='description'>
+					<p>This is seriously just some sample text. Nothing in here is really going to stay (including this). So, imagine that there is some text here describing the site or something. Also, imagine that there may be an image over to the left side of the div. That would be kind of cool I think! Or maybe it would take away from the page. Only one way to find out, though! </p>
+				</section> <!--end of textContent-->
+			</section><!--end of text content section-->	
+			     </div><!--end of main.clearfix-->
+		     </div><!--end of st.content.inner-->
+       </div><!--end of st-content-->
+      </div><!--end of st-pusher-->
+    </div><!--end of st-container-effects-2-->
+
+	<script src="js/classie.js"></script>
+	<script src="js/sidebarEffects.js"></script>
+</body>
+</html> <!-- end of document-->
