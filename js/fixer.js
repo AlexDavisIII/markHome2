@@ -6,6 +6,11 @@
 	if there are any option lists that are active
 		remove the active class from the child list item
 */
+
+var $defaultImage = $('ul ul li.active > a').attr('href'); //holds the first image in 
+
+$('#boxWrap img').attr('src', $defaultImage);
+
 $('.optionList').on('click', function(){
 
 	var $optionListId = $(this).attr('id'); //gets this optionlist's id
@@ -17,26 +22,23 @@ $('.optionList').on('click', function(){
 	$(this).addClass('active');
 	console.log($optionListId + ' now has an li with class active');
 
-
-	$('ul ul li').on('click', function(){
-		$('li').removeClass('activated');
-		$(this).addClass('activated');
-	});
-
 	//suppose to remove all li's from the optionlists
 	if( $('.active', this).length > 0 ){
-		$('li', this).removeClass('active');
+		$('> li', this).removeClass('active');
 	} 
-
 });
+
+$('ul ul li').on('click', function(){
+		$('ul ul li').removeClass('active');
+		$(this).addClass('active'); 
+	});
 
 
 /*Prevent default action of going to new page when image is clicked*/
-
-$('#boxWrap img').click(function(event){
+/*$('#boxWrap img').click(function(event){
 	event.preventDefault();
 	console.log('default prevented');
-});
+});*/
 
 /*
 if already active do something else? (if hasclass)

@@ -118,7 +118,7 @@ ul.active ul{
   transition: 5s all;
 }
 
-ul.active li.activated a{
+ul.active li.active a{
   color: yellow;
 }
 

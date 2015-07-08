@@ -81,6 +81,13 @@ function leftSelectClick(startingNumber){
 
 /*jQuery creations*/
 
+//access the li with class active
+//set the li's a href attr to the #boxwrap img src
+$('#boxWrap img').attr('src', function(){
+	$('ul ul li .active a').attr('href');
+});
+
+
 /*After a list option has been clickedL
 	Change the main image to the selected options' href attribute*/
 $('.optionList li a').click(function(e){
