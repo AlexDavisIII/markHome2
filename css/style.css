@@ -107,6 +107,21 @@ ul ul li a{
   font-style: italic;
 }
 
+
+ul ul{
+  max-height: 0;
+  overflow: hidden;
+}
+
+ul.active ul{
+  max-height: 100em;
+  transition: 5s all;
+}
+
+ul.active li.activated a{
+  color: yellow;
+}
+
 .btn {
   margin: 3px;
   width: 1.45em;
