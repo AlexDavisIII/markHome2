@@ -205,3 +205,11 @@ width: 50px;
 height: 50px;
 background-color: blue;	
 }
+
+/***************************
+LIST OPTION CUSTOMIZATIONS
+***************************/
+
+.optionHeading{
+  color: white;
+}

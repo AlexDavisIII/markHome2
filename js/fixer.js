@@ -7,10 +7,15 @@
 		remove the active class from the child list item
 */
 $('.optionList').on('click', function(){
-	console.log('optionlist item clicked');
+	var $optionListId = $(this).attr('id'); //gets this optionlist's id
+	console.log($optionListId + ' optionList has been accessed');
+
 	$('.optionList').removeClass('active');
-	console.log('active class removed');
+	console.log($optionListId + '\'s active class removed');
+
 	$(this).addClass('active');
+	console.log($optionListId + ' now has class active');
+
 	if( $('.active', this).length() > 0 ){
 		$('li', this).removeClass('active');
 	}
@@ -36,5 +41,18 @@ for arrows
 if is first disable prev
 if is last disable next
 if click arrow and not first 2 then do next,prev slector and toggle class
-
 */
+
+
+/********************
+My Take For Arrows
+/********************/
+
+when .rightSelect is clicked
+	remove active class of prev 'active'
+	traverse to sibling or next li
+	.addclass 'active' to that slibling or next li
+	assign href of current active li to boxwrap img src attr
+
+
+
