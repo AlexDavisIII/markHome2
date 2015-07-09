@@ -8,14 +8,13 @@
 */
 
 var $defaultImage = $('ul ul li.active > a').attr('href'); //holds the first image in 
-
 $('#boxWrap img').attr('src', $defaultImage);
+
 
 $('.optionList').on('click', function(){
 
 	var $optionListId = $(this).attr('id'); //gets this optionlist's id
 	console.log($optionListId + ' optionList has been accessed');
-
 
 	$('.optionList').removeClass('active');
 	console.log($optionListId + '\'s active class removed');
@@ -32,6 +31,47 @@ $('ul ul li').on('click', function(){
 		$('ul ul li').removeClass('active');
 		$(this).addClass('active'); 
 	});
+
+/*******************************************************************************
+					PLEASE READ WHEN YOU COME BACK TOMORROW!
+				complete below only if you haven't done it at home
+*******************************************************************************/
+
+/*When .rightSelect is clicked
+	if ul ul li hasclass active
+
+		remove '.active' class from currently active li (in ul ul li)
+		add class of active to the sibling li
+		set img src to href of currently active li 
+ */
+
+
+$('.rightSelect').on('click', function(){
+	var listHref = $('ul ul li.active a').attr('href');
+	var startingPoint =0;
+/*For when no section has been clicked*/
+	if($('ul ul li').eq(startingPoint).hasClass('active')){
+		$('ul ul li').eq(startingPoint).removeClass('active');
+		$('ul ul li').eq(++startingPoint).addClass('active');
+		$('#boxWrap img').attr('src', $('ul ul li.active a').attr('href'));
+
+/*For when a section has been clicked*/
+	}else if($('#styleTile').hasClass('active')){
+		//beginning of StyleTile configurations
+			var lengthOfSection = $('#styleTile ul li').length;
+		    if($('#styleTile ul li').hasClass('active') && startingPoint < lengthOfSection){
+				$('#styleTile ul li').eq(startingPoint).removeClass('active');
+				$('#styleTile ul li').eq(++startingPoint).addClass('active');
+				$('#boxWrap img').attr('src', $('#styleTile ul li.active a').attr('href'));
+				console.log(startingPoint);
+		}//end of StyleTile section configurations
+	}
+
+/**/
+
+
+	
+});
 
 
 /*Prevent default action of going to new page when image is clicked*/
@@ -68,14 +108,6 @@ when .rightSelect is clicked
 		addclass 'active' to first child in ul
 		assign href of current active li to boxwrap
 */
-
-	$('.rightSelect').on('click', function(){
-		var activeUL = $('li .active').attr('class'); //gets the id of the ul with active array
-		console.log(activeUL);
-		var sTLength = $('#mockup li').length; //holds max number of li
-
-
-	});
 
 /*
 	if the previous adjacent sibling has class active
