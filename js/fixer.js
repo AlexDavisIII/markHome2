@@ -56,24 +56,50 @@ $('.rightSelect').on('click', function(){
 		$('#boxWrap img').attr('src', $('ul ul li.active a').attr('href'));
 
 /*For when a section has been clicked*/
-	}else if($('#styleTile').hasClass('active')){
+	}else{
+		choser(wireframe);
 		//beginning of StyleTile configurations
-			var lengthOfSection = $('#styleTile ul li').length;
+
+			/*var lengthOfSection = $('#styleTile ul li').length;
+			$('#styleTile ul li').eq(startingPoint).addClass('active'); //starts the section at the start
+
 		    if($('#styleTile ul li').hasClass('active') && startingPoint < lengthOfSection){
 				$('#styleTile ul li').eq(startingPoint).removeClass('active');
 				$('#styleTile ul li').eq(++startingPoint).addClass('active');
 				$('#boxWrap img').attr('src', $('#styleTile ul li.active a').attr('href'));
-				console.log(startingPoint);
+				console.log(startingPoint);*/
+
+
 		}//end of StyleTile section configurations
-	}
-
-/**/
 
 
-	
+/*Functions created*/
+
+//insert an id like styleTile
+
 });
 
+function choser(id){
+	var theId = id;
+	/*if($('\'#'+id+'\'').hasClass('active')){
+		//beginning of StyleTile configurations
 
+			var lengthOfSection = $('\'#'+id+'\' ul li').length;
+			$('\'#'+id+'\' ul li').eq(startingPosition).addClass('active'); //starts the section at the start
+
+		    if($('\'#'+id+'\' ul li').hasClass('active') && startingPosition < lengthOfSection){
+				$('\'#'+id+'\' ul li').eq(startingPosition).removeClass('active');
+				$('\'#'+id+'\' ul li').eq(++startingPosition).addClass('active');
+				$('#boxWrap img').attr('src', $('\'#'+id+'\' ul li.active a').attr('href'));
+				console.log(startingPosition);
+
+
+		}//end of StyleTile section configurations
+	}*/
+
+	console.log(theId);
+
+}
 /*Prevent default action of going to new page when image is clicked*/
 /*$('#boxWrap img').click(function(event){
 	event.preventDefault();
