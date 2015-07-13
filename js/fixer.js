@@ -48,7 +48,7 @@ $('ul ul li').on('click', function(){
 
 $('.rightSelect').on('click', function(){
 	var listHref = $('ul ul li.active a').attr('href');
-	var startingPoint =0;
+	var startingPoint = 0;
 /*For when no section has been clicked*/
 	if($('ul ul li').eq(startingPoint).hasClass('active')){
 		$('ul ul li').eq(startingPoint).removeClass('active');
@@ -57,21 +57,33 @@ $('.rightSelect').on('click', function(){
 
 /*For when a section has been clicked*/
 	}else{
-		choser(wireframe);
+		//choser('#wireframe');
 		//beginning of StyleTile configurations
+			if($('ul').hasClass('active') &&  $('ul ul li').hasClass('active')){
+				var starter = 0;
+				if($('ul.active ul li').eq(0).hasClass('active')){
 
-			/*var lengthOfSection = $('#styleTile ul li').length;
-			$('#styleTile ul li').eq(startingPoint).addClass('active'); //starts the section at the start
+					$('ul.active ul li').eq(starter).removeClass('active');	
+					starter++;
+					$('ul.active ul li').eq(starter).addClass('active');
+					$('#boxWrap img').attr('src', $('ul.active ul li.active a').attr('href'));
 
-		    if($('#styleTile ul li').hasClass('active') && startingPoint < lengthOfSection){
-				$('#styleTile ul li').eq(startingPoint).removeClass('active');
-				$('#styleTile ul li').eq(++startingPoint).addClass('active');
-				$('#boxWrap img').attr('src', $('#styleTile ul li.active a').attr('href'));
-				console.log(startingPoint);*/
+				}else{
+					var liIndexPosition = $('ul.active ul li.active').index();
+					var liIndexPositionCounter = Number(liIndexPosition);
 
+					console.log(liIndexPositionCounter);
 
-		}//end of StyleTile section configurations
+					$('ul.active ul li').eq(liIndexPositionCounter).removeClass('active');
+					liIndexPositionCounter++;
+					$('ul.active ul li').eq(liIndexPositionCounter).addClass('active');
+					console.log('new Index: ' + liIndexPositionCounter);
+					$('#boxWrap img').attr('src', $('ul.active ul li.active a').attr('href'));
+				}
+			}
 
+			/*var lengthOfSection = $('#wireframe ul li').length;*/
+	}
 
 /*Functions created*/
 
@@ -79,27 +91,6 @@ $('.rightSelect').on('click', function(){
 
 });
 
-function choser(id){
-	var theId = id;
-	/*if($('\'#'+id+'\'').hasClass('active')){
-		//beginning of StyleTile configurations
-
-			var lengthOfSection = $('\'#'+id+'\' ul li').length;
-			$('\'#'+id+'\' ul li').eq(startingPosition).addClass('active'); //starts the section at the start
-
-		    if($('\'#'+id+'\' ul li').hasClass('active') && startingPosition < lengthOfSection){
-				$('\'#'+id+'\' ul li').eq(startingPosition).removeClass('active');
-				$('\'#'+id+'\' ul li').eq(++startingPosition).addClass('active');
-				$('#boxWrap img').attr('src', $('\'#'+id+'\' ul li.active a').attr('href'));
-				console.log(startingPosition);
-
-
-		}//end of StyleTile section configurations
-	}*/
-
-	console.log(theId);
-
-}
 /*Prevent default action of going to new page when image is clicked*/
 /*$('#boxWrap img').click(function(event){
 	event.preventDefault();
