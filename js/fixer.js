@@ -1,4 +1,3 @@
-
 //explaination of the below code
 
 /*****************************
@@ -44,8 +43,12 @@ $('.rightSelect').on('click', function(){
 
 /*For when a section has been clicked*/
 	}else{
+		var starter = 0;
+		var liIndexPosition = $('ul.active ul li.active').index();
+		var liIndexPositionCounter = Number(liIndexPosition); //just a checker to make certain a number is being returned rather than a string
+
+		if(liIndexPositionCounter < $('ul.active ul li').length-1){
 			if($('ul').hasClass('active') &&  $('ul ul li').hasClass('active')){
-				var starter = 0;
 				if($('ul.active ul li').eq(0).hasClass('active')){
 
 					$('ul.active ul li').eq(starter).removeClass('active');	
@@ -54,10 +57,6 @@ $('.rightSelect').on('click', function(){
 					$('#boxWrap img').attr('src', $('ul.active ul li.active a').attr('href'));
 
 				}else{
-					var liIndexPosition = $('ul.active ul li.active').index();
-					var liIndexPositionCounter = Number(liIndexPosition); //just a checker to make certain a number is being returned rather than a string
-
-					console.log(liIndexPositionCounter);
 
 					$('ul.active ul li').eq(liIndexPositionCounter).removeClass('active');
 					liIndexPositionCounter++;
@@ -65,7 +64,17 @@ $('.rightSelect').on('click', function(){
 					console.log('new Index: ' + liIndexPositionCounter);
 					$('#boxWrap img').attr('src', $('ul.active ul li.active a').attr('href'));
 				}
-			}
+			} 
+		}else if(liIndexPositionCounter == $('ul.active ul li').length-1){
+
+					$('ul.active ul li').eq(liIndexPositionCounter).removeClass('active');
+					liIndexPositionCounter = 0;
+					$('ul.active ul li').eq(liIndexPositionCounter).addClass('active');
+					console.log('new Index: ' + liIndexPositionCounter);
+					$('#boxWrap img').attr('src', $('ul.active ul li.active a').attr('href'));
+
+		}
+
 	}
 });
 
