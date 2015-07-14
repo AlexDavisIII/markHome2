@@ -79,11 +79,57 @@ $('.rightSelect').on('click', function(){
 
 		}
 
-	}
+	} 
 });
 
 
+$('.leftSelect').on('click', function(){
+	var listHref = $('ul ul li.active a').attr('href');
+	var startingId = $('ul ul li.active').closest('nav > ul').attr('id');
+	var startingPoint = $(startingId + ' ul li.active').length;//this is the length of the starting optionlist (styleTile)
 
+/*For when no section has been clicked*/
+	if($('ul ul li').eq(startingPoint).hasClass('active')){
+		$('ul ul li').eq(startingPoint).removeClass('active');
+		startingPoint--;
+		$('ul ul li').eq(startingPoint).addClass('active');
+		$('#boxWrap img').attr('src', $('ul ul li.active a').attr('href'));
 
+	}else{
+		/*For when a section has been clicked*/
+		var starter = 0; //the first list item in the active optionList
+		var activeLength = $('ul.active ul li.active').length;//the length of the active optionList
 
+		var liIndexPosition = $('ul.active ul li.active').index();
+		var liIndexPositionCounter = Number(liIndexPosition); //just a checker to make certain a number is being returned rather than a string
 
+		if(liIndexPositionCounter > starter){
+			if($('ul').hasClass('active') &&  $('ul ul li').hasClass('active')){
+				if($('ul.active ul li').eq(activeLength).hasClass('active')){
+					$('ul.active ul li').eq(activeLength).removeClass('active');	
+					//go to the end of the list
+					starter--;
+					$('ul.active ul li').eq(starter).addClass('active');
+					$('#boxWrap img').attr('src', $('ul.active ul li.active a').attr('href'));
+
+				}else{
+
+					$('ul.active ul li').eq(liIndexPositionCounter).removeClass('active');
+					liIndexPositionCounter--;
+					$('ul.active ul li').eq(liIndexPositionCounter).addClass('active');
+					console.log('new Index: ' + liIndexPositionCounter);
+					$('#boxWrap img').attr('src', $('ul.active ul li.active a').attr('href'));
+				}
+			} 
+		}else if(liIndexPositionCounter < 0){
+		//This logic is for resetting back to start of list
+					$('ul.active ul li').eq(liIndexPositionCounter).removeClass('active');
+					liIndexPositionCounter = activeLength;
+					$('ul.active ul li').eq(liIndexPositionCounter).addClass('active');
+					console.log('new Index: ' + liIndexPositionCounter);
+					$('#boxWrap img').attr('src', $('ul.active ul li.active a').attr('href'));
+
+		}
+
+	} 
+});
