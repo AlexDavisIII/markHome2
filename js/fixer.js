@@ -35,14 +35,18 @@ $('.rightSelect').on('click', function(){
 	var listHref = $('ul ul li.active a').attr('href');
 	var startingPoint = 0;
 
-//For when no section has been clicked
+/*For when no section has been clicked*/
 	if($('ul ul li').eq(startingPoint).hasClass('active')){
 		$('ul ul li').eq(startingPoint).removeClass('active');
-		$('ul ul li').eq(++startingPoint).addClass('active');
+		startingPoint++;
+		$('ul ul li').eq(startingPoint).addClass('active');
 		$('#boxWrap img').attr('src', $('ul ul li.active a').attr('href'));
 
-/*For when a section has been clicked*/
+		//just in case
+		//var startingId = console.log($('ul ul li.active').closest('nav > ul').attr('id'));
 	}else{
+
+		/*For when a section has been clicked*/
 		var starter = 0;
 		var liIndexPosition = $('ul.active ul li.active').index();
 		var liIndexPositionCounter = Number(liIndexPosition); //just a checker to make certain a number is being returned rather than a string
@@ -66,7 +70,7 @@ $('.rightSelect').on('click', function(){
 				}
 			} 
 		}else if(liIndexPositionCounter == $('ul.active ul li').length-1){
-
+		//This logic is for resetting back to start of list
 					$('ul.active ul li').eq(liIndexPositionCounter).removeClass('active');
 					liIndexPositionCounter = 0;
 					$('ul.active ul li').eq(liIndexPositionCounter).addClass('active');
