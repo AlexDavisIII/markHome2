@@ -21,9 +21,11 @@ $('.optionList').on('click', function(){
 });
 
 
-$('ul ul li').on('click', function(){
+$('ul ul li').on('click', function(e){
+		e.preventDefault();
 		$('ul ul li').removeClass('active');//remove active class from all li elements
 		$(this).addClass('active');  //add remove class to THIS li in specific
+		$('#boxWrap img').attr('src', $('ul ul li.active a').attr('href'));
 	});
 
 /***************************************
@@ -84,15 +86,16 @@ $('.rightSelect').on('click', function(){
 
 
 $('.leftSelect').on('click', function(){
+	var firstItem = 0; //used to hold 0 index
 	var listHref = $('ul ul li.active a').attr('href');
 	var startingId = $('ul ul li.active').closest('nav > ul').attr('id');
-	var startingPoint = $(startingId + ' ul li.active').length;//this is the length of the starting optionlist (styleTile)
+	var startingPoint = $('ul.active ul li.active').length;//this is the length of the starting optionlist (styleTile)
 
 /*For when no section has been clicked*/
-	if($('ul ul li').eq(startingPoint).hasClass('active')){
-		$('ul ul li').eq(startingPoint).removeClass('active');
-		startingPoint--;
+	if($('ul ul li').eq(firstItem).hasClass('active')){
+		$('ul ul li').eq(firstItem).removeClass('active');
 		$('ul ul li').eq(startingPoint).addClass('active');
+		console.log(startingPoint);
 		$('#boxWrap img').attr('src', $('ul ul li.active a').attr('href'));
 
 	}else{
@@ -103,12 +106,13 @@ $('.leftSelect').on('click', function(){
 		var liIndexPosition = $('ul.active ul li.active').index();
 		var liIndexPositionCounter = Number(liIndexPosition); //just a checker to make certain a number is being returned rather than a string
 
-		if(liIndexPositionCounter > starter){
+		if(liIndexPositionCounter >= starter){
+			//if the ul and the li have active classes
 			if($('ul').hasClass('active') &&  $('ul ul li').hasClass('active')){
+				//if the last list element in the optionList is active
 				if($('ul.active ul li').eq(activeLength).hasClass('active')){
 					$('ul.active ul li').eq(activeLength).removeClass('active');	
-					//go to the end of the list
-					starter--;
+					//go to the first element in the list 
 					$('ul.active ul li').eq(starter).addClass('active');
 					$('#boxWrap img').attr('src', $('ul.active ul li.active a').attr('href'));
 
@@ -121,15 +125,17 @@ $('.leftSelect').on('click', function(){
 					$('#boxWrap img').attr('src', $('ul.active ul li.active a').attr('href'));
 				}
 			} 
-		}else if(liIndexPositionCounter < 0){
-		//This logic is for resetting back to start of list
+		}	else if(liIndexPositionCounter < 0){
+				if($('ul').hasClass('active') && $('ul ul li').hasClass('active')){
+					//This logic is for resetting back to start of list
 					$('ul.active ul li').eq(liIndexPositionCounter).removeClass('active');
 					liIndexPositionCounter = activeLength;
 					$('ul.active ul li').eq(liIndexPositionCounter).addClass('active');
 					console.log('new Index: ' + liIndexPositionCounter);
 					$('#boxWrap img').attr('src', $('ul.active ul li.active a').attr('href'));
 
-		}
+				}
+			}
 
 	} 
 });
