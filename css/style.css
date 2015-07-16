@@ -180,9 +180,13 @@ IMAGE TO BE CHANGED
 ************************/
 img {
   width: 750px;
-
   display: inline;
   font-family: Homenaje; }
+
+#chevron{
+  width: 20em;
+  height: 4em;
+}
 
 /***********************************
 TEXT AREA (PARAGRAPH AND SUCH)
