@@ -18,6 +18,10 @@ body,
   background-color: #f08144;
   width: 100%; }
 
+.st-content{
+  overflow: scroll;
+}
+
 .st-content,
 .st-content-inner {
   position: relative; }

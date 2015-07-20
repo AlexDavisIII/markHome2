@@ -10,16 +10,34 @@ html, body {
   font-family: 'Ubuntu', sans-serif;
   font-weight: bold;
   font-size: 16px;
-  overflow: scroll;
-  overflow-y:scroll;
-  }
+}
+
+/******************************************************
+The Optionlist...options...part....THE SIDEBAR!!!
+******************************************************/
+
+#menu-2{
+  background-color: #d0cccb;
+}
+
+#menu-2 li a{
+   color: #5d5958;
+}
+
+#menu-2 li a:hover{
+  background-color: #ef4f25;
+  color: white;
+}
 
 
+/******************************
+Image and imageholder
+******************************/
 #boxWrap {
   padding-top: 70px;
   text-align: center;
   display: block;
-  width: 100%; 
+  min-width: 100%; 
 }
 
 /*********************
@@ -179,7 +197,7 @@ ul.active li.active a{
 IMAGE TO BE CHANGED 
 ************************/
 img {
-  width: 750px;
+  max-width: 100%;
   display: inline;
   font-family: Homenaje; }
 
@@ -201,8 +219,8 @@ TEXT AREA (PARAGRAPH AND SUCH)
 .imageHolder{
 	display: table-cell; 
 	background-color: white;
-	width: 10em;
-	height: 10em;
+	min-width: 10em;
+	min-height: 10em;
 }
 
 #textContent{
