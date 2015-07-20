@@ -20,15 +20,60 @@ The Optionlist...options...part....THE SIDEBAR!!!
   background-color: #d0cccb;
 }
 
-#menu-2 li a{
-   color: #5d5958;
+#menu-2 h1{
+    color: #5d5958;
 }
 
-#menu-2 li a:hover{
-  background-color: #ef4f25;
+#menu-2 ul.active h1{
+   color: white;  
+}
+
+#menu-2 ul.active li a:hover{
+  background-color: #ef4f35;
   color: white;
 }
 
+#menu-2 ul.active ul li a{
+    color: #5d5958;
+}
+
+#menu-2 ul.active li.active a{
+  color: yellow;
+}
+
+nav .optionList {
+  width: 100%;
+  text-align: center; 
+}
+
+/*Beginning of Potentially Useless Rules*/
+
+ul {
+  width: 100%;
+  list-style: none;
+  margin-top: 10px;
+}
+
+
+ul.active ul li a{
+  width: 100%;
+  font-size: .7em;
+  text-decoration: none;
+  font-style: italic;
+}
+
+ul ul{
+  max-height: 0;
+  overflow: hidden;
+}
+
+ul.active ul{
+  max-height: 100em;
+  transition: 5s all;
+}
+
+
+/*End of potentially useless rules*/
 
 /******************************
 Image and imageholder
@@ -108,40 +153,6 @@ h1#pageHeader{
   transition-duration: .5s;
   background-color: #ef4f25; }
 
-nav .optionList {
-  width: 100%;
-  text-align: center; 
-}
-
-ul {
-  width: 100%;
-  list-style: none;
-  margin-top: 10px;
-}
-
-
-ul ul li a{
-  width: 100%;
-  font-size: .7em;
-  text-decoration: none;
-  font-style: italic;
-}
-
-
-ul ul{
-  max-height: 0;
-  overflow: hidden;
-}
-
-ul.active ul{
-  max-height: 100em;
-  transition: 5s all;
-}
-
-ul.active li.active a{
-  color: yellow;
-}
-
 .btn {
   margin: 3px;
   width: 1.45em;
@@ -202,7 +213,8 @@ img {
   font-family: Homenaje; }
 
 #chevron{
-  width: 20em;
+  background-color: white;
+  width: 100%;
   height: 4em;
 }
 

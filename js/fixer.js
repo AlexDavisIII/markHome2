@@ -23,9 +23,13 @@ $('.optionList').on('click', function(){
 
 $('ul ul li').on('click', function(e){
 		e.preventDefault();
+		var nameOfLink = $('ul ul li.active a').html();
+
+
 		$('ul ul li').removeClass('active');//remove active class from all li elements
 		$(this).addClass('active');  //add remove class to THIS li in specific
 		$('#boxWrap img').attr('src', $('ul ul li.active a').attr('href'));
+		$('#headerTitle p').text(nameOfLink+ " " + $('ul.active h1').html());
 	});
 
 /***************************************
