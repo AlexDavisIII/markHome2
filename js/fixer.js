@@ -25,10 +25,11 @@ $('ul ul li').on('click', function(e){
 		e.preventDefault();
 		var nameOfLink = $('ul ul li.active a').html();
 
-
 		$('ul ul li').removeClass('active');//remove active class from all li elements
 		$(this).addClass('active');  //add remove class to THIS li in specific
 		$('#boxWrap img').attr('src', $('ul ul li.active a').attr('href'));
+
+		var nameOfLink = $('ul ul li.active a').html();
 		$('#headerTitle p').text(nameOfLink+ " " + $('ul.active h1').html());
 	});
 
@@ -40,6 +41,8 @@ $('ul ul li').on('click', function(e){
 $('.rightSelect').on('click', function(){
 	var listHref = $('ul ul li.active a').attr('href');
 	var startingPoint = 0;
+	var nameOfLink = $('ul ul li.active a').html();
+	$('#headerTitle p').text(nameOfLink+ " " + $('ul.active h1').html());
 
 /*For when no section has been clicked*/
 	if($('ul ul li').eq(startingPoint).hasClass('active')){
@@ -94,6 +97,9 @@ $('.leftSelect').on('click', function(){
 	var listHref = $('ul ul li.active a').attr('href');
 	var startingId = $('ul ul li.active').closest('nav > ul').attr('id');
 	var startingPoint = $('ul.active ul li.active').length;//this is the length of the starting optionlist (styleTile)
+var nameOfLink = $('ul ul li.active a').html();
+		$('#headerTitle p').text(nameOfLink+ " " + $('ul.active h1').html());
+
 
 /*For when no section has been clicked*/
 	if($('ul ul li').eq(firstItem).hasClass('active')){
@@ -140,6 +146,5 @@ $('.leftSelect').on('click', function(){
 
 				}
 			}
-
 	} 
 });
