@@ -119,6 +119,7 @@ HEADER BUTTON (HAMBURGER)
 ****************************/
 
 .button {
+  font-size: 90%;
   height: 100%;
   background-color: #e9e8e6;
 }
@@ -135,11 +136,11 @@ h1#pageHeader{
 
 /*Container for button and header*/
 #st-trigger-effects{
- height: 100%;
+  height: 100%;
 }
 
 #mover {
-  width: 33.3%;
+  min-width: 30%;
   height: 100%;
   float: left;
   display: inline-block;
@@ -165,43 +166,50 @@ h1#pageHeader{
 
 /*header title (the one AFTER 'DBS Interactive' and the Hamburger button*/
 #headerTitle{
+  font-size: 1.5em;
   float: left;
   background-color: #D0CCCB;
   display:inline-block;
   height: 100%;
-  width: 50%;
+  min-width: 60%;
+  text-align: center;
 }
 
 #headerDescription{
   display: inline-block;
   background-color: #d0cccb;
-  margin: 0;
-  height: 100%;
 }
 
 
 /*left and right arrows*/
 
 #controls{
-  height: 100%;
-  width: 5%;
-  display:inline-block;
+  text-align: center;
 }
 
-.leftSelect {
-  font-size: 1.5em;
-  display:inline-block;
-}
-
-.rightSelect {
-  font-size: 1.5em;
+#leftControl, #rightControl{
   display: inline-block;
+}
+
+#leftControl {
+  padding: 0;
+  font-size: 2em;
+  display:inline-block;
+  color: #8a8786;
+}
+
+#rightControl {
+  margin: 0;
+  padding: 0;
+  font-size: 2em;
+  display: inline-block;
+    color: #8a8786;
 }
 
 .leftSelect:hover, .rightSelect:hover {
   transition-property: color, cursor;
   transition-duration: .5s, .2s;
-  color: green;
+  color: #EF4F25;
   cursor: pointer; }
 
 /************************
@@ -264,3 +272,35 @@ LIST OPTION CUSTOMIZATIONS
 .optionHeading{
   color: white;
 }
+
+
+
+/****************
+  MEDIA QUERIES
+****************/
+
+@media all and (max-width: 680px){
+  #headerTitle, #headerDescription {
+    display:none;
+  }
+  
+  #mover{
+    text-align:center;
+    width: 80%;
+  }
+  
+  #leftControl{
+    position: relative;
+    bottom: 2em;
+    font-size: 1.7em;
+  }
+  
+  #rightControl{
+   position: relative;
+    bottom: 2em;
+    font-size: 1.7em;
+  }  
+}
+
+
+
