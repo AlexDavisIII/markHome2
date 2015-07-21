@@ -41,14 +41,17 @@ $('ul ul li').on('click', function(e){
 $('.rightSelect').on('click', function(){
 	var listHref = $('ul ul li.active a').attr('href');
 	var startingPoint = 0;
-	var nameOfLink = $('ul ul li.active a').html();
-	$('#headerTitle p').text(nameOfLink+ " " + $('ul.active h1').html());
 
 /*For when no section has been clicked*/
 	if($('ul ul li').eq(startingPoint).hasClass('active')){
 		$('ul ul li').eq(startingPoint).removeClass('active');
 		startingPoint++;
 		$('ul ul li').eq(startingPoint).addClass('active');
+
+			//used for setting the appropriate name to the top middle part of the page
+			var nameOfLink = $('ul.active ul li.active a').html();
+			$('#headerTitle p').text(nameOfLink+ " " + $('ul.active h1').html());
+
 		$('#boxWrap img').attr('src', $('ul ul li.active a').attr('href'));
 
 		//just in case
@@ -67,6 +70,11 @@ $('.rightSelect').on('click', function(){
 					$('ul.active ul li').eq(starter).removeClass('active');	
 					starter++;
 					$('ul.active ul li').eq(starter).addClass('active');
+
+					//used for setting the appropriate name to the top middle part of the page
+					var nameOfLink = $('ul.active ul li.active a').html();
+					$('#headerTitle p').text(nameOfLink+ " " + $('ul.active h1').html());
+
 					$('#boxWrap img').attr('src', $('ul.active ul li.active a').attr('href'));
 
 				}else{
@@ -75,6 +83,12 @@ $('.rightSelect').on('click', function(){
 					liIndexPositionCounter++;
 					$('ul.active ul li').eq(liIndexPositionCounter).addClass('active');
 					console.log('new Index: ' + liIndexPositionCounter);
+
+					//used for setting the appropriate name to the top middle part of the page
+					var nameOfLink = $('ul.active ul li.active a').html();
+					$('#headerTitle p').text(nameOfLink+ " " + $('ul.active h1').html());
+
+
 					$('#boxWrap img').attr('src', $('ul.active ul li.active a').attr('href'));
 				}
 			} 
@@ -84,6 +98,11 @@ $('.rightSelect').on('click', function(){
 					liIndexPositionCounter = 0;
 					$('ul.active ul li').eq(liIndexPositionCounter).addClass('active');
 					console.log('new Index: ' + liIndexPositionCounter);
+
+					//used for setting the appropriate name to the top middle part of the page
+					var nameOfLink = $('ul.active ul li.active a').html();
+					$('#headerTitle p').text(nameOfLink+ " " + $('ul.active h1').html());
+
 					$('#boxWrap img').attr('src', $('ul.active ul li.active a').attr('href'));
 
 		}
@@ -97,8 +116,7 @@ $('.leftSelect').on('click', function(){
 	var listHref = $('ul ul li.active a').attr('href');
 	var startingId = $('ul ul li.active').closest('nav > ul').attr('id');
 	var startingPoint = $('ul.active ul li.active').length;//this is the length of the starting optionlist (styleTile)
-var nameOfLink = $('ul ul li.active a').html();
-		$('#headerTitle p').text(nameOfLink+ " " + $('ul.active h1').html());
+
 
 
 /*For when no section has been clicked*/
@@ -106,6 +124,12 @@ var nameOfLink = $('ul ul li.active a').html();
 		$('ul ul li').eq(firstItem).removeClass('active');
 		$('ul ul li').eq(startingPoint).addClass('active');
 		console.log(startingPoint);
+
+		//used for setting the appropriate name to the top middle part of the page
+		var nameOfLink = $('ul.active ul li.active a').html();
+		$('#headerTitle p').text(nameOfLink+ " " + $('ul.active h1').html());
+
+
 		$('#boxWrap img').attr('src', $('ul ul li.active a').attr('href'));
 
 	}else{
@@ -124,6 +148,11 @@ var nameOfLink = $('ul ul li.active a').html();
 					$('ul.active ul li').eq(activeLength).removeClass('active');	
 					//go to the first element in the list 
 					$('ul.active ul li').eq(starter).addClass('active');
+
+						//used for setting the appropriate name to the top middle part of the page
+						var nameOfLink = $('ul.active ul li.active a').html();
+						$('#headerTitle p').text(nameOfLink+ " " + $('ul.active h1').html());
+
 					$('#boxWrap img').attr('src', $('ul.active ul li.active a').attr('href'));
 
 				}else{
@@ -132,6 +161,11 @@ var nameOfLink = $('ul ul li.active a').html();
 					liIndexPositionCounter--;
 					$('ul.active ul li').eq(liIndexPositionCounter).addClass('active');
 					console.log('new Index: ' + liIndexPositionCounter);
+
+						//used for setting the appropriate name to the top middle part of the page
+						var nameOfLink = $('ul.active ul li.active a').html();
+						$('#headerTitle p').text(nameOfLink+ " " + $('ul.active h1').html());
+
 					$('#boxWrap img').attr('src', $('ul.active ul li.active a').attr('href'));
 				}
 			} 
@@ -142,6 +176,12 @@ var nameOfLink = $('ul ul li.active a').html();
 					liIndexPositionCounter = activeLength;
 					$('ul.active ul li').eq(liIndexPositionCounter).addClass('active');
 					console.log('new Index: ' + liIndexPositionCounter);
+	
+						//used for setting the appropriate name to the top middle part of the page
+						var nameOfLink = $('ul.active ul li.active a').html();
+						$('#headerTitle p').text(nameOfLink+ " " + $('ul.active h1').html());
+
+
 					$('#boxWrap img').attr('src', $('ul.active ul li.active a').attr('href'));
 
 				}
