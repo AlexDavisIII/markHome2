@@ -290,8 +290,13 @@ LIST OPTION CUSTOMIZATIONS
 ****************/
 
 @media all and (max-width: 815px){
-  #headerTitle, #headerDescription {
-    display:none;
+  #headerTitle{
+   display:inline-block;
+     min-width: 30%;
+  } 
+  
+  #headerDescription {
+   font-size: .8em;
   }
   
   #pageHeader{
@@ -304,7 +309,7 @@ LIST OPTION CUSTOMIZATIONS
   
   #mover{
     text-align:center;
-    width: 50%;
+    width: 5%;
   }
   
   #leftControl{
@@ -333,10 +338,9 @@ LIST OPTION CUSTOMIZATIONS
   
   #controls{
     position: relative;
-    
+    top: .1em;
     text-align: center;
-    margin-left: 20%
-    
+    margin-left: 10%
     
   }
 }
