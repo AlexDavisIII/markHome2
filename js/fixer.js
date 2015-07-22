@@ -6,7 +6,10 @@ Clicked Link Funtionality
 
 var $defaultImage = $('ul ul li.active > a').attr('href'); //holds the first image in 
 $('#boxWrap img').attr('src', $defaultImage);
+var nameOfCompany = $('#pageHeader').html();
+var capitalizedCompany= nameOfCompany.toUpperCase();
 
+$('#pageHeader').html(capitalizedCompany);
 
 //optionList === specific section of links in the revealed list of options
 $('.optionList').on('click', function(){
