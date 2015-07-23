@@ -133,8 +133,7 @@ h1#pageHeader{
   display:inline-block;
   position:relative;
   bottom: 5px;
-  left: .1em;
-  
+  left: .2em;
 }
 
 /*Container for button and header*/
@@ -340,9 +339,66 @@ LIST OPTION CUSTOMIZATIONS
     position: relative;
     top: .1em;
     text-align: center;
-    margin-left: 10%
-    
+    margin-left: 5%;
   }
+  
+  
+
+@media all and (max-width: 465px){
+  #headerTitle{
+   display:none;
+     min-width: 30%;
+  } 
+  
+  #pageHeader{
+    display: none;
+  }
+  
+  h1#pageHeader{
+    display: none;
+  }
+  
+  #mover{
+    text-align:center;
+    width: 5%;
+  }
+  
+  #controls{
+    position: relative;
+    left: 5em;
+  }
+  
+  #leftControl{
+    position: relative;
+    bottom:1em;
+    font-size: 3.2em;
+  }
+  
+  #rightControl{
+   position: relative;
+    bottom: 1em;
+    font-size: 3.2em;
+  }  
+  
+  header#buttonLogo{
+    display: inline-block;
+    width: 2.9em;
+  }
+  
+  div.btn{
+    background-color: rgba(0,0,0,.3);
+    height: 1.2em;
+    width: 100%;
+    border-radius: 10%;
+  }
+  
+  #controls{
+    position: relative;
+    top: .1em;
+    text-align: center;
+    margin-left: 5%;
+  }
+  
 }
 
 
