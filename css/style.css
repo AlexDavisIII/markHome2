@@ -289,85 +289,156 @@ LIST OPTION CUSTOMIZATIONS
 ****************/
 
 @media all and (max-width: 852px){
+  div.button{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: .5em;
+  }
+  
   #headerTitle{
    display:inline-block;
-     min-width: 30%;
+     min-width: 50%;
+     padding-top: .3em;
+     padding-left: 10px;
+     padding-right: 10px;
   } 
   
   #headerDescription {
    font-size: .8em;
   }
   
-  #pageHeader{
-    display: none;
-  }
-  
-  h1#pageHeader{
-    display: none;
-  }
-  
-  #mover{
-    text-align:center;
-    width: 5%;
-  }
-  
   #leftControl{
+    margin-left: 1rem;
     position: relative;
     bottom:1em;
-    font-size: 3.2em;
+    font-size: 2.3em;
   }
   
   #rightControl{
    position: relative;
-    bottom: 1em;
-    font-size: 3.2em;
-  }  
-  
-  header#buttonLogo{
-    display: inline-block;
-    width: 2.9em;
-    
-    
+   bottom: 1em;
+   font-size: 2.3em;
   }
   
-  div.btn{
-    background-color: rgba(0,0,0,.3);
-    height: 1.2em;
-    width: 100%;
-    border-radius: 10%;
+  #pageHeader{
+    font-size: 1.3em;
   }
-  
+
   #controls{
     position: relative;
     top: .1em;
     text-align: center;
     margin-left: 5%;
   }
+}
   
   
+@media all and (max-width: 716px){
+  
+  div.button{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: .5em;
+  }
+  
+  #headerTitle{
+   display:inline-block;
+     min-width: 40%;
+     padding-top: .3em;
+     padding-left: 10px;
+     padding-right: 10px;
+  } 
+  
+  #headerDescription {
+   font-size: .8em;
+  }
+  
+  #leftControl{
+    margin-left: 1rem;
+    position: relative;
+    bottom:1em;
+    font-size: 2.5em;
+  }
+  
+  #rightControl{
+   position: relative;
+   bottom: 1em;
+   font-size: 2.5em;
+  }
+  
+  #pageHeader{
+    font-size: 1.3em;
+  }
 
-@media all and (max-width: 503px){
+  #controls{
+    position: relative;
+    top: .1em;
+    text-align: center;
+    margin-left: 5%;
+  }
+}
+
+@media all and (max-width: 612px){
+  div.button{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: .5em;
+  }
+  
+  #headerTitle{
+   display:inline-block;
+     min-width: 30%;
+     padding-top: .3em;
+     padding-left: 10px;
+     padding-right: 10px;
+  } 
+  
+  #headerDescription {
+   font-size: .8em;
+  }
+  
+  #leftControl{
+    margin-left: 1rem;
+    position: relative;
+    bottom: 1em;
+    font-size: 2em;
+  }
+  
+  #rightControl{
+   position: relative;
+   bottom: 1em;
+   font-size: 2em;
+  }
+  
+  #pageHeader{
+    font-size: 1.3em;
+  }
+
+  #controls{
+    position: relative;
+    top: .1em;
+    text-align: center;
+    margin-left: 1%;
+  }  
+}
+  
+@media all and (max-width: 580px){
   #headerTitle{
    display:none;
      min-width: 30%;
   } 
   
-  #pageHeader{
-    display: none;
-  }
-  
-  h1#pageHeader{
-    display: none;
-  }
-  
-  #mover{
-    text-align:center;
-    width: 5%;
+  div.button{
+    min-width: 25em;
   }
   
   #controls{
     position: relative;
-    left: 5em;
+    left: 1em;
+  }
+  
+  #pageHeader{
+    font-size: 1.3em;
   }
   
   #leftControl{
@@ -377,31 +448,41 @@ LIST OPTION CUSTOMIZATIONS
   }
   
   #rightControl{
-   position: relative;
+    position: relative;
     bottom: 1em;
     font-size: 3.2em;
   }  
+}
+
+@media all and (max-width: 450px){
+  #headerTitle{
+   display:none;
+     min-width: 30%;
+  } 
   
-  header#buttonLogo{
-    display: inline-block;
-    width: 2.9em;
-  }
-  
-  div.btn{
-    background-color: rgba(0,0,0,.3);
-    height: 1.2em;
-    width: 100%;
-    border-radius: 10%;
+  div.button{
+    min-width: 1em;
   }
   
   #controls{
     position: relative;
-    top: .1em;
-    text-align: center;
-    margin-left: 5%;
+    left: 1em;
   }
   
+  #pageHeader{
+    font-size: 1.3em;
+  }
+  
+  #leftControl{
+    position: relative;
+    bottom:1em;
+    font-size: 3.2em;
+  }
+  
+  #rightControl{
+    position: relative;
+    bottom: 1em;
+    font-size: 3.2em;
+  }  
 }
-
-
 
