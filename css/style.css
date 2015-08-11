@@ -108,6 +108,17 @@ HEADER EVERYTHING
     #head h1:hover {
       text-shadow: 1px 1px 3px white; }
 
+#subHead{
+  height: 70px;
+  margin-top: 70px;
+  background-color: red;
+}
+
+#subHead h3{
+  text-align: center;
+  padding-top: 1em;
+}
+
 /***************
 The Logo
 ***************/
@@ -381,7 +392,7 @@ LIST OPTION CUSTOMIZATIONS
   }
 }
 
-@media all and (max-width: 612px){
+@media all and (max-width: 652px){
   div.button{
     padding-left: 10px;
     padding-right: 10px;
@@ -425,6 +436,56 @@ LIST OPTION CUSTOMIZATIONS
   }  
 }
   
+
+@media all and (max-width: 612px){
+  div.button{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: .5em;
+  }
+  
+  #mover{
+    font-size: 1em;
+  }
+  
+  #headerTitle{
+   display:inline-block;
+     min-width: 20%;
+     padding-top: .3em;
+     padding-left: 10px;
+     padding-right: 10px;
+  } 
+  
+  #headerDescription {
+   font-size: .8em;
+  }
+  
+  #leftControl{
+    position: relative;
+    bottom: 1em;
+    font-size: 1.5em;
+  }
+  
+  #rightControl{
+   position: relative;
+   bottom: 1em;
+   font-size: 1.5em;
+  
+  #pageHeader{
+  }
+    font-size: 1.3em;
+  }
+
+  #controls{
+    position: relative;
+    top: .1em;
+    text-align: center;
+    margin-left: 1%;
+  }  
+}
+
+
+
 @media all and (max-width: 580px){
   #headerTitle{
    display:none;
@@ -470,6 +531,42 @@ LIST OPTION CUSTOMIZATIONS
   #controls{
     position: relative;
     left: 1em;
+  }
+  
+  #pageHeader{
+    font-size: 1.3em;
+  }
+  
+  #leftControl{
+    position: relative;
+    bottom:1em;
+    font-size: 3.2em;
+  }
+  
+  #rightControl{
+    position: relative;
+    bottom: 1em;
+    font-size: 3.2em;
+  }  
+}
+
+@media all and (max-width: 365px){
+  #headerTitle{
+   display:none;
+     min-width: 30%;
+  } 
+  
+  #mover{
+    width: 450%;
+  }
+  
+  div.button{
+    min-width: 1em;
+  }
+  
+  #controls{
+    position: relative;
+    left: 4em;
   }
   
   #pageHeader{
