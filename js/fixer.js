@@ -31,9 +31,12 @@ $('ul ul li').on('click', function(e){
 		$('ul ul li').removeClass('active');//remove active class from all li elements
 		$(this).addClass('active');  //add remove class to THIS li in specific
 		$('#boxWrap img').attr('src', $('ul ul li.active a').attr('href'));
-
+		//For top middle portion (the grey box)
 		var nameOfLink = $('ul ul li.active a').html();
 		$('#headerTitle p').text(nameOfLink+ " " + $('ul.active h1').html());
+		
+		//closes menu after a click
+		$('#st-container').removeClass('st-menu-open');
 	});
 
 /***************************************
