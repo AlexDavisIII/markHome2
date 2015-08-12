@@ -84,12 +84,12 @@ $('.rightSelect').on('click', function(){
 					$('#boxWrap img').attr('src', $('ul.active ul li.active a').attr('href'));
 
 				}else{
-
+					
 					$('ul.active ul li').eq(liIndexPositionCounter).removeClass('active');
 					liIndexPositionCounter++;
 					$('ul.active ul li').eq(liIndexPositionCounter).addClass('active');
 					console.log('new Index: ' + liIndexPositionCounter);
-
+					
 					//used for setting the appropriate name to the top middle part of the page
 					var nameOfLink = $('ul.active ul li.active a').html();
 					$('#headerTitle p').text(nameOfLink+ " " + $('ul.active h1').html());
@@ -135,7 +135,6 @@ $('.leftSelect').on('click', function(){
 		var nameOfLink = $('ul.active ul li.active a').html();
 		$('#headerTitle p').text(nameOfLink+ " " + $('ul.active h1').html());
 
-
 		$('#boxWrap img').attr('src', $('ul ul li.active a').attr('href'));
 
 	}else{
@@ -146,6 +145,7 @@ $('.leftSelect').on('click', function(){
 		var liIndexPosition = $('ul.active ul li.active').index();
 		var liIndexPositionCounter = Number(liIndexPosition); //just a checker to make certain a number is being returned rather than a string
 
+		
 		if(liIndexPositionCounter >= starter){
 			//if the ul and the li have active classes
 			if($('ul').hasClass('active') &&  $('ul ul li').hasClass('active')){
@@ -193,4 +193,18 @@ $('.leftSelect').on('click', function(){
 				}
 			}
 	} 
+});
+
+/**********************
+For the sidebar
+**********************/
+
+//Dynamically change the number to the position of the list item
+
+//if you click on the right arrow
+$('.rightSelect').on('click', function(){
+	//Use the li's index position to display value to get correct number
+ 	var linkPosition = 	$('ul.active ul li.active').index();	
+	//set the sidebar's h3 text to the linkPostion value
+	$('#subHead h3').text("Test " + ++linkPosition);
 });
