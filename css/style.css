@@ -119,6 +119,7 @@ HEADER EVERYTHING
 #subHead h3{
   text-align: center;
   padding-top: 1em;
+  color: #c3bfbd;
 }
 
 /***************
@@ -189,7 +190,7 @@ h1#pageHeader{
   background-color: #D0CCCB;
   display:inline-block;
   height: 100%;
-  min-width: 60%;
+  min-width: 50%;
   text-align: center;
 }
 
