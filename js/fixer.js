@@ -200,11 +200,27 @@ For the sidebar
 **********************/
 
 //Dynamically change the number to the position of the list item
-
 //if you click on the right arrow
 $('.rightSelect').on('click', function(){
+
 	//Use the li's index position to display value to get correct number
- 	var linkPosition = 	$('ul.active ul li.active').index();	
+ 	var rightLinkPosition =	$('ul.active ul li.active').index();	
+
 	//set the sidebar's h3 text to the linkPostion value
-	$('#subHead h3').text("Test " + ++linkPosition);
+	$('#subHead h3').text("Test " + ++rightLinkPosition);
 });
+
+
+
+//When the leftSelect has been clicked
+$('.leftSelect').on('click', function(){
+//if the li has a class of active
+	var listItem = $('ul.active ul li'); //holds a list item in the active ul	
+	var listItemPosition = $('ul.active ul li.active').index();
+	if($(listItem).hasClass('active')){
+		//output that li's index as console.
+		console.log('Position: '+listItemPosition);	
+		$('#subHead h3').text("Test " + ++listItemPosition);
+	}	
+});
+	
