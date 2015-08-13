@@ -111,9 +111,9 @@ HEADER EVERYTHING
       text-shadow: 1px 1px 3px white; }
 
 #subHead{
-  height: 70px;
+  height: 0px;
   margin-top: 70px;
-  background-color: red;
+  background-color: #ffffff;
 }
 
 #subHead h3{

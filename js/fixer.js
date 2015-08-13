@@ -33,7 +33,7 @@ $('ul ul li').on('click', function(e){
 		$('#boxWrap img').attr('src', $('ul ul li.active a').attr('href'));
 		//For top middle portion (the grey box)
 		var nameOfLink = $('ul ul li.active a').html();
-		$('#headerTitle p').text(nameOfLink+ " " + $('ul.active h1').html());
+		$('#headerTitle p').text(nameOfLink);
 		
 		//closes menu after a click
 		$('#st-container').removeClass('st-menu-open');
@@ -56,7 +56,7 @@ $('.rightSelect').on('click', function(){
 
 			//used for setting the appropriate name to the top middle part of the page
 			var nameOfLink = $('ul.active ul li.active a').html();
-			$('#headerTitle p').text(nameOfLink+ " " + $('ul.active h1').html());
+			$('#headerTitle p').text(nameOfLink);
 
 		$('#boxWrap img').attr('src', $('ul ul li.active a').attr('href'));
 
@@ -79,7 +79,7 @@ $('.rightSelect').on('click', function(){
 
 					//used for setting the appropriate name to the top middle part of the page
 					var nameOfLink = $('ul.active ul li.active a').html();
-					$('#headerTitle p').text(nameOfLink+ " " + $('ul.active h1').html());
+					$('#headerTitle p').text(nameOfLink);
 
 					$('#boxWrap img').attr('src', $('ul.active ul li.active a').attr('href'));
 
@@ -92,7 +92,7 @@ $('.rightSelect').on('click', function(){
 					
 					//used for setting the appropriate name to the top middle part of the page
 					var nameOfLink = $('ul.active ul li.active a').html();
-					$('#headerTitle p').text(nameOfLink+ " " + $('ul.active h1').html());
+					$('#headerTitle p').text(nameOfLink); 
 
 
 					$('#boxWrap img').attr('src', $('ul.active ul li.active a').attr('href'));
@@ -107,7 +107,7 @@ $('.rightSelect').on('click', function(){
 
 					//used for setting the appropriate name to the top middle part of the page
 					var nameOfLink = $('ul.active ul li.active a').html();
-					$('#headerTitle p').text(nameOfLink+ " " + $('ul.active h1').html());
+					$('#headerTitle p').text(nameOfLink);
 
 					$('#boxWrap img').attr('src', $('ul.active ul li.active a').attr('href'));
 
@@ -133,7 +133,7 @@ $('.leftSelect').on('click', function(){
 
 		//used for setting the appropriate name to the top middle part of the page
 		var nameOfLink = $('ul.active ul li.active a').html();
-		$('#headerTitle p').text(nameOfLink+ " " + $('ul.active h1').html());
+		$('#headerTitle p').text(nameOfLink); 
 
 		$('#boxWrap img').attr('src', $('ul ul li.active a').attr('href'));
 
@@ -157,7 +157,7 @@ $('.leftSelect').on('click', function(){
 
 						//used for setting the appropriate name to the top middle part of the page
 						var nameOfLink = $('ul.active ul li.active a').html();
-						$('#headerTitle p').text(nameOfLink+ " " + $('ul.active h1').html());
+						$('#headerTitle p').text(nameOfLink);
 
 					$('#boxWrap img').attr('src', $('ul.active ul li.active a').attr('href'));
 
@@ -170,7 +170,7 @@ $('.leftSelect').on('click', function(){
 
 						//used for setting the appropriate name to the top middle part of the page
 						var nameOfLink = $('ul.active ul li.active a').html();
-						$('#headerTitle p').text(nameOfLink+ " " + $('ul.active h1').html());
+						$('#headerTitle p').text(nameOfLink);
 
 					$('#boxWrap img').attr('src', $('ul.active ul li.active a').attr('href'));
 				}
@@ -185,7 +185,7 @@ $('.leftSelect').on('click', function(){
 	
 						//used for setting the appropriate name to the top middle part of the page
 						var nameOfLink = $('ul.active ul li.active a').html();
-						$('#headerTitle p').text(nameOfLink+ " " + $('ul.active h1').html());
+						$('#headerTitle p').text(nameOfLink); 
 
 
 					$('#boxWrap img').attr('src', $('ul.active ul li.active a').attr('href'));
@@ -203,11 +203,13 @@ For the sidebar
 //if you click on the right arrow
 $('.rightSelect').on('click', function(){
 
+	var nameType= $('ul.active h1').html(); //holds whether currently on wireframe, styletile, or mockup
+
 	//Use the li's index position to display value to get correct number
  	var rightLinkPosition =	$('ul.active ul li.active').index();	
 
 	//set the sidebar's h3 text to the linkPostion value
-	$('#subHead h3').text("Test " + ++rightLinkPosition);
+	$('#subHead h3').text(nameType +" "+ ++rightLinkPosition);
 });
 
 
@@ -217,10 +219,13 @@ $('.leftSelect').on('click', function(){
 //if the li has a class of active
 	var listItem = $('ul.active ul li'); //holds a list item in the active ul	
 	var listItemPosition = $('ul.active ul li.active').index();
+
+	var nameType= $('ul.active h1').html(); //holds whether currently on wireframe, styletile, or mockup
+
 	if($(listItem).hasClass('active')){
 		//output that li's index as console.
 		console.log('Position: '+listItemPosition);	
-		$('#subHead h3').text("Test " + ++listItemPosition);
+		$('#subHead h3').text(nameType + " "+  ++listItemPosition);
 	}	
 });
 	
